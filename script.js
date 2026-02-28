@@ -32,7 +32,7 @@ const szukajInput = document.querySelector("#szukajInput");
 const loginInput = document.querySelector("#loginInput");
 const loginZatwierdzBtn = document.querySelector("#loginZatwierdz");
 const loginBlad = document.querySelector("#loginBlad");
-const kontaktForm = document.querySelector(".sekcja-kontakt form");
+const kontaktWyslijBtn = document.querySelector("#kontaktWyslij");
 const kontaktImie = document.querySelector("#kontaktImie");
 const kontaktEmail = document.querySelector("#kontaktEmail");
 const kontaktWiadomosc = document.querySelector("#kontaktWiadomosc");
@@ -40,7 +40,7 @@ const kontaktBlad = document.querySelector("#kontaktBlad");
 
 const loginPattern = /^[a-zA-Z0-9]{3,15}$/;
 const imiePattern = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ ]{3,50}$/;
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailPattern = /^[^\s]+@[^\s@]+\.[^\s@]+$/;
 const wiadomoscPattern = /^[\s\S]{10,500}$/;
 
 function wyswietlSamochody(lista) {
@@ -126,5 +126,28 @@ loginZatwierdzBtn.addEventListener("click", () => {
   } else {
     localStorage.setItem("login", login);
     window.location.href = "index.html";
+  }
+});
+
+// Formularz kontaktowy - walidacja
+kontaktWyslijBtn.addEventListener("click", () => {
+  let imie = kontaktImie.value.trim();
+  let email = kontaktEmail.value.trim();
+  let wiadomosc = kontaktWiadomosc.value.trim();
+
+  if (!imiePattern.test(imie)) {
+    kontaktBlad.innerHTML =
+      "Imię musi zawierać od 3 do 50 znaków i tylko litery.";
+  } else if (!emailPattern.test(email)) {
+    kontaktBlad.innerHTML = "Podaj poprawny adres e-mail.";
+  } else if (!wiadomoscPattern.test(wiadomosc)) {
+    kontaktBlad.innerHTML =
+      "Wiadomość musi zawierać od 10 do 500 znaków.";
+  } else {
+    kontaktBlad.innerHTML = "";
+    kontaktImie.value = "";
+    kontaktEmail.value = "";
+    kontaktWiadomosc.value = "";
+    alert("Wiadomość została wysłana!");
   }
 });

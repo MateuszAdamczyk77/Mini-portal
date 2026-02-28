@@ -88,7 +88,7 @@ body.dark .sekcja-kontakt textarea {
     font-size: 14px;
 }
 
-#przyciskLogowania, #loginZatwierdz, .kontakt-wyslij {
+#przyciskLogowania, #loginZatwierdz, #kontaktWyslij {
     padding: 8px 18px;
     background-color: #4a90d9;
     color: #fff;
@@ -102,12 +102,11 @@ body.dark .sekcja-kontakt textarea {
     margin-left: 10px;
 }
 
-.kontakt-wyslij {
+#kontaktWyslij {
     margin-top: 10px;
     padding: 10px 30px;
     font-size: 16px;
 }
-
 
 .login-strona {
     max-width: 400px;
@@ -140,7 +139,7 @@ body.dark .login-strona {
     display: block;
 }
 
-#loginBlad {
+#loginBlad, #kontaktBlad {
     color: red;
     font-size: 12px;
     margin-top: 8px;
