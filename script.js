@@ -116,40 +116,44 @@ loginBtn.addEventListener("click", () => {
 });
 
 // Strona logowania - zatwierdzenie
-if (localStorage.getItem("login")) {
-  window.location.href = "index.html";
-}
-
-loginZatwierdzBtn.addEventListener("click", () => {
-  let login = loginInput.value.trim();
-  if (login === "" || !loginPattern.test(login)) {
-    loginBlad.innerHTML =
-      "Login musi zawierać od 3 do 15 znaków i zawierać tylko litery i cyfry.";
-  } else {
-    localStorage.setItem("login", login);
+if (loginZatwierdzBtn) {
+  if (localStorage.getItem("login")) {
     window.location.href = "index.html";
   }
-});
+
+  loginZatwierdzBtn.addEventListener("click", () => {
+    let login = loginInput.value.trim();
+    if (login === "" || !loginPattern.test(login)) {
+      loginBlad.innerHTML =
+        "Login musi zawierać od 3 do 15 znaków i zawierać tylko litery i cyfry.";
+    } else {
+      localStorage.setItem("login", login);
+      window.location.href = "index.html";
+    }
+  });
+}
 
 // Formularz kontaktowy - walidacja
-kontaktWyslijBtn.addEventListener("click", () => {
-  let imie = kontaktImie.value.trim();
-  let email = kontaktEmail.value.trim();
-  let wiadomosc = kontaktWiadomosc.value.trim();
+if (kontaktWyslijBtn) {
+  kontaktWyslijBtn.addEventListener("click", () => {
+    let imie = kontaktImie.value.trim();
+    let email = kontaktEmail.value.trim();
+    let wiadomosc = kontaktWiadomosc.value.trim();
 
-  if (!imiePattern.test(imie)) {
-    kontaktBlad.innerHTML =
-      "Imię musi zawierać od 3 do 50 znaków i tylko litery.";
-  } else if (!emailPattern.test(email)) {
-    kontaktBlad.innerHTML = "Podaj poprawny adres e-mail.";
-  } else if (!wiadomoscPattern.test(wiadomosc)) {
-    kontaktBlad.innerHTML =
-      "Wiadomość musi zawierać od 10 do 500 znaków.";
-  } else {
-    kontaktBlad.innerHTML = "";
-    kontaktImie.value = "";
-    kontaktEmail.value = "";
-    kontaktWiadomosc.value = "";
-    alert("Wiadomość została wysłana!");
-  }
-});
+    if (!imiePattern.test(imie)) {
+      kontaktBlad.innerHTML =
+        "Imię musi zawierać od 3 do 50 znaków i tylko litery.";
+    } else if (!emailPattern.test(email)) {
+      kontaktBlad.innerHTML = "Podaj poprawny adres e-mail.";
+    } else if (!wiadomoscPattern.test(wiadomosc)) {
+      kontaktBlad.innerHTML =
+        "Wiadomość musi zawierać od 10 do 500 znaków.";
+    } else {
+      kontaktBlad.innerHTML = "";
+      kontaktImie.value = "";
+      kontaktEmail.value = "";
+      kontaktWiadomosc.value = "";
+      alert("Wiadomość została wysłana!");
+    }
+  });
+}
