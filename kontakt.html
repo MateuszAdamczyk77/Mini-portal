@@ -22,25 +22,27 @@
         </div>
     </nav>
 
-    <div class="sekcja-kontakt">
+    <section class="sekcja-kontakt">
         <h2>Skontaktuj się z nami</h2>
 
-        <div class="kontakt-grupa">
-            <label for="kontaktImie">Imię i nazwisko</label>
-            <input type="text" id="kontaktImie" class="kontakt-input" placeholder="Jan Kowalski">
-        </div>
+        <form>
+            <div class="kontakt-grupa">
+                <label for="kontaktImie">Imię i nazwisko</label>
+                <input type="text" id="kontaktImie" name="imie" required placeholder="Jan Kowalski">
+            </div>
 
-        <div class="kontakt-grupa">
-            <label for="kontaktEmail">Adres e-mail</label>
-            <input type="email" id="kontaktEmail" class="kontakt-input" placeholder="jan@gmail.com">
-        </div>
+            <div class="kontakt-grupa">
+                <label for="kontaktEmail">Adres e-mail</label>
+                <input type="email" id="kontaktEmail" name="email" required placeholder="jan@gmail.com">
+            </div>
 
-        <div class="kontakt-grupa">
-            <label for="kontaktWiadomosc">Wiadomość</label>
-            <textarea id="kontaktWiadomosc" class="kontakt-textarea" placeholder="Napisz swoją wiadomość..."></textarea>
-        </div>
+            <div class="kontakt-grupa">
+                <label for="kontaktWiadomosc">Wiadomość</label>
+                <textarea id="kontaktWiadomosc" name="wiadomosc" required placeholder="Napisz swoją wiadomość..."></textarea>
+            </div>
 
-        <button class="kontakt-wyslij" id="kontaktWyslij">Wyślij wiadomość</button>
+            <button type="submit" class="kontakt-wyslij">Wyślij wiadomość</button>
+        </form>
 
         <div class="kontakt-info">
             <h2>Mateusz Adamczyk</h2>
@@ -48,7 +50,7 @@
             <p>Telefon: +48 123 456 789</p>
             <p>Adres: ul. Limanowskiego Wałowa 26/30</p>
         </div>
-    </div>
+    </section>
 
     <footer>
         <p>Portal Motoryzacyjny</p>

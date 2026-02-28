@@ -20,7 +20,6 @@ body.dark {
 body.dark .navbar,
 body.dark .karta,
 body.dark .cytat-sekcja,
-body.dark .login-formularz,
 body.dark .sekcja-onas,
 body.dark .sekcja-kontakt,
 body.dark footer {
@@ -31,8 +30,8 @@ body.dark footer {
 
 body.dark .szukaj-input,
 body.dark .login-input,
-body.dark .kontakt-input,
-body.dark .kontakt-textarea {
+body.dark .sekcja-kontakt input,
+body.dark .sekcja-kontakt textarea {
     background-color: #333;
     color: #e0e0e0;
     border-color: #555;
@@ -142,7 +141,7 @@ body.dark .login-strona {
 }
 
 .login-blad {
-    color: #4a90d9;
+    color: red;
     font-size: 12px;
     margin-top: 8px;
 }
@@ -182,7 +181,7 @@ body.dark .login-strona {
     font-size: 16px;
 }
 
-.szukaj-input, .login-input, .kontakt-input, .kontakt-textarea {
+.szukaj-input, .login-input, .sekcja-kontakt input, .sekcja-kontakt textarea {
     padding: 10px;
     border: 1px solid #ddd;
     font-size: 15px;
@@ -277,13 +276,15 @@ body.dark .login-strona {
     font-weight: bold;
 }
 
-.kontakt-input, .kontakt-textarea {
+.sekcja-kontakt input,
+.sekcja-kontakt textarea {
     width: 100%;
     font-family: inherit;
 }
 
-.kontakt-textarea {
+.sekcja-kontakt textarea {
     min-height: 120px;
+    resize: vertical;
 }
 
 .kontakt-info {
@@ -294,10 +295,6 @@ body.dark .login-strona {
 
 .kontakt-info p {
     margin-bottom: 8px;
-}
-
-.login-blad {
-    color: red;
 }
 
 footer {
