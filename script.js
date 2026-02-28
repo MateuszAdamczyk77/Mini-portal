@@ -40,12 +40,14 @@ const kontaktBlad = document.querySelector("#kontaktBlad");
 
 const loginPattern = /^[a-zA-Z0-9]{3,15}$/;
 const imiePattern = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]{3,50}$/;
-const emailPattern = /^[^\s]+@[^\s@]+\.[^\s@]+$/;
-const wiadomoscPattern = /^[\s\S]{10,500}$/;
+const emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]{2,4}$/;
+const wiadomoscPattern = /^[a-zA-Z0-9ąćęłńóśźżĄĆĘŁŃÓŚŹŻ .,!?;:'"()]{10,100}$/;
 
 function wyswietlSamochody(lista) {
   let kontener = document.querySelector("#kartyKontener");
-  if (!kontener) return;
+  if (!kontener) {
+    return;
+  }
 
   kontener.innerHTML = "";
   for (let i = 0; i < lista.length; i++) {
@@ -76,7 +78,9 @@ function wyloguj() {
 wyswietlSamochody(samochody);
 
 // Wyswietl Losowy cytat
-if (cytat) cytat.innerHTML = losowyCytat(ciekawostki);
+if (cytat) {
+  cytat.innerHTML = losowyCytat(ciekawostki);
+}
 
 // Filtrowanie na zywo
 if (szukajInput) {
@@ -159,7 +163,7 @@ if (kontaktWyslijBtn) {
     }
 
     if (!wiadomoscPattern.test(wiadomosc)) {
-      kontaktBlad.innerHTML = "Wiadomość musi zawierać od 10 do 500 znaków";
+      kontaktBlad.innerHTML = "Wiadomość musi zawierać od 10 do 100 znaków";
     }
     if (imiePattern.test(imie) && emailPattern.test(email) && wiadomoscPattern.test(wiadomosc)) {
       kontaktBlad.innerHTML = "";
