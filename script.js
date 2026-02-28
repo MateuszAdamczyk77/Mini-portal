@@ -79,13 +79,15 @@ wyswietlSamochody(samochody);
 if (cytat) cytat.innerHTML = losowyCytat(ciekawostki);
 
 // Filtrowanie na zywo
-szukajInput.addEventListener("input", () => {
-  let tekst = szukajInput.value.toLowerCase();
-  let wynik = samochody.filter((samochod) => {
-    return samochod[0].toLowerCase().includes(tekst);
+if (szukajInput) {
+  szukajInput.addEventListener("input", () => {
+    let tekst = szukajInput.value.toLowerCase();
+    let wynik = samochody.filter((samochod) => {
+      return samochod[0].toLowerCase().includes(tekst);
+    });
+    wyswietlSamochody(wynik);
   });
-  wyswietlSamochody(wynik);
-});
+}
 
 // Dark/light mode
 MotywBtn.addEventListener("click", () => {
