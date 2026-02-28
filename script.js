@@ -89,14 +89,21 @@ if (szukajInput) {
   });
 }
 
-// Dark/light mode
+// Dark/light mode - odczyt z localStorage
+if (localStorage.getItem("motyw") === "dark") {
+  document.body.className = "dark";
+  MotywBtn.innerHTML = "Tryb jasny";
+}
+
 MotywBtn.addEventListener("click", () => {
   if (document.body.className === "dark") {
     document.body.className = "";
     MotywBtn.innerHTML = "Tryb ciemny";
+    localStorage.setItem("motyw", "light");
   } else {
     document.body.className = "dark";
     MotywBtn.innerHTML = "Tryb jasny";
+    localStorage.setItem("motyw", "dark");
   }
 });
 
