@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie - Portal Motoryzacyjny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo">AutoPortal</a>
+        <ul class="navbar-linki">
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="onas.html">O portalu</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class="navbar-akcje">
+            <button id="przyciskMotyw" class="przycisk-motyw">Tryb ciemny</button>
+        </div>
+    </nav>
+
+    <div class="login-strona">
+        <h2>Zaloguj się</h2>
+        <input type="text" id="loginInput" class="login-input" placeholder="Wpisz swój login">
+        <button id="loginZatwierdz" class="login-zatwierdz">Zaloguj</button>
+        <p id="loginBlad" class="login-blad"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

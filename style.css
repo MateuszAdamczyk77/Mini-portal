@@ -1,0 +1,311 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+body.dark {
+    background-color: #222222;
+    color: #e0e0e0;
+}
+
+body.dark .navbar,
+body.dark .karta,
+body.dark .cytat-sekcja,
+body.dark .login-formularz,
+body.dark .sekcja-onas,
+body.dark .sekcja-kontakt,
+body.dark footer {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+
+body.dark .szukaj-input,
+body.dark .login-input,
+body.dark .kontakt-input,
+body.dark .kontakt-textarea {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+
+.navbar {
+    display: flex;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4a90d9;
+    text-decoration: none;
+    margin-right: 40px;
+    line-height: 36px;
+}
+
+.navbar-linki {
+    display: flex;
+    list-style: none;
+    line-height: 36px;
+}
+
+.navbar-linki li {
+    margin-right: 20px;
+}
+
+.navbar-linki a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-linki a:hover {
+    color: #4a90d9;
+}
+
+.navbar-akcje {
+    margin-left: auto;
+}
+
+
+.przycisk-motyw {
+    padding: 8px 14px;
+    border: 2px solid #4a90d9;
+    background: none;
+    color: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.przycisk-logowania, .login-zatwierdz, .kontakt-wyslij {
+    padding: 8px 18px;
+    background-color: #4a90d9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.przycisk-logowania {
+    margin-left: 10px;
+}
+
+.kontakt-wyslij {
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+}
+
+
+.login-strona {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.login-strona h2 {
+    color: #4a90d9;
+    margin-bottom: 20px;
+}
+
+.login-strona .login-zatwierdz {
+    width: 100%;
+}
+
+body.dark .login-strona {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+.login-input {
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.login-blad {
+    color: #4a90d9;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.powitanie-tekst {
+    font-weight: bold;
+    color: #4a90d9;
+    line-height: 36px;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #4a90d9;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+.cytat-sekcja {
+    text-align: center;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 700px;
+    background-color: #fff;
+    border-left: 4px solid #4a90d9;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.szukaj-input, .login-input, .kontakt-input, .kontakt-textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    background-color: #fff;
+    color: #222;
+}
+
+
+.szukaj-sekcja {
+    text-align: center;
+    padding: 20px;
+}
+
+.szukaj-input {
+    padding: 12px 20px;
+    width: 500px;
+    max-width: 90%;
+    border-width: 2px;
+    font-size: 16px;
+    outline: none;
+}
+
+.szukaj-input:focus {
+    border-color: #4a90d9;
+}
+
+
+.karty-kontener {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.karta {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 25px;
+    width: 30%;
+    margin: 1.5%;
+}
+
+.karta h3 {
+    color: #4a90d9;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.karta p {
+    font-size: 15px;
+}
+
+.brak-wynikow {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #888;
+    width: 100%;
+}
+
+
+.sekcja-onas, .sekcja-kontakt {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.sekcja-kontakt {
+    max-width: 600px;
+}
+
+.sekcja-onas h2, .sekcja-kontakt h2 {
+    color: #4a90d9;
+    margin-bottom: 15px;
+}
+
+.sekcja-onas p {
+    margin-bottom: 15px;
+}
+
+
+.kontakt-grupa {
+    margin-bottom: 15px;
+}
+
+.kontakt-grupa label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.kontakt-input, .kontakt-textarea {
+    width: 100%;
+    font-family: inherit;
+}
+
+.kontakt-textarea {
+    min-height: 120px;
+}
+
+.kontakt-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.kontakt-info p {
+    margin-bottom: 8px;
+}
+
+.login-blad {
+    color: red;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #888;
+}

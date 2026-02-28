@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Portal Motoryzacyjny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo">AutoPortal</a>
+        <ul class="navbar-linki">
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="onas.html">O portalu</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class="navbar-akcje">
+            <span id="powitanieTekst" class="powitanie-tekst"></span>
+            <button id="przyciskMotyw" class="przycisk-motyw">Tryb ciemny</button>
+            <button id="przyciskLogowania" class="przycisk-logowania">Zaloguj się</button>
+        </div>
+    </nav>
+
+    <div class="sekcja-kontakt">
+        <h2>Skontaktuj się z nami</h2>
+
+        <div class="kontakt-grupa">
+            <label for="kontaktImie">Imię i nazwisko</label>
+            <input type="text" id="kontaktImie" class="kontakt-input" placeholder="Jan Kowalski">
+        </div>
+
+        <div class="kontakt-grupa">
+            <label for="kontaktEmail">Adres e-mail</label>
+            <input type="email" id="kontaktEmail" class="kontakt-input" placeholder="jan@gmail.com">
+        </div>
+
+        <div class="kontakt-grupa">
+            <label for="kontaktWiadomosc">Wiadomość</label>
+            <textarea id="kontaktWiadomosc" class="kontakt-textarea" placeholder="Napisz swoją wiadomość..."></textarea>
+        </div>
+
+        <button class="kontakt-wyslij" id="kontaktWyslij">Wyślij wiadomość</button>
+
+        <div class="kontakt-info">
+            <h2>Mateusz Adamczyk</h2>
+            <p>Email: kontakt@autoportal.pl</p>
+            <p>Telefon: +48 123 456 789</p>
+            <p>Adres: ul. Limanowskiego Wałowa 26/30</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Portal Motoryzacyjny</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

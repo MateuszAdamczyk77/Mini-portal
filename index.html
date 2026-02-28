@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Motoryzacyjny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo">AutoPortal</a>
+        <ul class="navbar-linki">
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="onas.html">O portalu</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class="navbar-akcje">
+            <span id="powitanieTekst" class="powitanie-tekst"></span>
+            <button id="przyciskMotyw" class="przycisk-motyw">Tryb ciemny</button>
+            <button id="przyciskLogowania" class="przycisk-logowania">Zaloguj się</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Portal Motoryzacyjny</h1>
+        <p>Twoje źródło wiedzy o samochodach</p>
+    </section>
+
+    <div class="cytat-sekcja">
+        <p id="cytatDnia"></p>
+    </div>
+
+    <div class="szukaj-sekcja">
+        <input type="text" id="poleSzukaj" class="szukaj-input" placeholder="Szukaj samochodu...">
+    </div>
+
+    <div id="kartyKontener" class="karty-kontener">
+    </div>
+
+    <footer>
+        <p>Portal Motoryzacyjny</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
