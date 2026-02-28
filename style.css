@@ -28,8 +28,8 @@ body.dark footer {
 }
 
 
-body.dark .szukaj-input,
-body.dark .login-input,
+body.dark #szukajInput,
+body.dark #loginInput,
 body.dark .sekcja-kontakt input,
 body.dark .sekcja-kontakt textarea {
     background-color: #333;
@@ -78,7 +78,7 @@ body.dark .sekcja-kontakt textarea {
 }
 
 
-.przycisk-motyw {
+#przyciskMotyw {
     padding: 8px 14px;
     border: 2px solid #4a90d9;
     background: none;
@@ -88,7 +88,7 @@ body.dark .sekcja-kontakt textarea {
     font-size: 14px;
 }
 
-.przycisk-logowania, .login-zatwierdz, .kontakt-wyslij {
+#przyciskLogowania, #loginZatwierdz, .kontakt-wyslij {
     padding: 8px 18px;
     background-color: #4a90d9;
     color: #fff;
@@ -98,7 +98,7 @@ body.dark .sekcja-kontakt textarea {
     font-size: 14px;
 }
 
-.przycisk-logowania {
+#przyciskLogowania {
     margin-left: 10px;
 }
 
@@ -123,7 +123,7 @@ body.dark .sekcja-kontakt textarea {
     margin-bottom: 20px;
 }
 
-.login-strona .login-zatwierdz {
+.login-strona #loginZatwierdz {
     width: 100%;
 }
 
@@ -132,7 +132,7 @@ body.dark .login-strona {
     border-color: #444;
 }
 
-.login-input {
+#loginInput {
     padding: 8px 12px;
     font-size: 14px;
     width: 100%;
@@ -140,13 +140,13 @@ body.dark .login-strona {
     display: block;
 }
 
-.login-blad {
+#loginBlad {
     color: red;
     font-size: 12px;
     margin-top: 8px;
 }
 
-.powitanie-tekst {
+#powitanieTekst {
     font-weight: bold;
     color: #4a90d9;
     line-height: 36px;
@@ -181,7 +181,7 @@ body.dark .login-strona {
     font-size: 16px;
 }
 
-.szukaj-input, .login-input, .sekcja-kontakt input, .sekcja-kontakt textarea {
+#szukajInput, #loginInput, .sekcja-kontakt input, .sekcja-kontakt textarea {
     padding: 10px;
     border: 1px solid #ddd;
     font-size: 15px;
@@ -195,7 +195,7 @@ body.dark .login-strona {
     padding: 20px;
 }
 
-.szukaj-input {
+#szukajInput {
     padding: 12px 20px;
     width: 500px;
     max-width: 90%;
@@ -204,12 +204,12 @@ body.dark .login-strona {
     outline: none;
 }
 
-.szukaj-input:focus {
+#szukajInput:focus {
     border-color: #4a90d9;
 }
 
 
-.karty-kontener {
+#kartyKontener {
     display: flex;
     flex-wrap: wrap;
     padding: 20px 40px;

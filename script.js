@@ -32,8 +32,16 @@ const szukajInput = document.querySelector("#szukajInput");
 const loginInput = document.querySelector("#loginInput");
 const loginZatwierdzBtn = document.querySelector("#loginZatwierdz");
 const loginBlad = document.querySelector("#loginBlad");
+const kontaktForm = document.querySelector(".sekcja-kontakt form");
+const kontaktImie = document.querySelector("#kontaktImie");
+const kontaktEmail = document.querySelector("#kontaktEmail");
+const kontaktWiadomosc = document.querySelector("#kontaktWiadomosc");
+const kontaktBlad = document.querySelector("#kontaktBlad");
 
 const loginPattern = /^[a-zA-Z0-9]{3,15}$/;
+const imiePattern = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ ]{3,50}$/;
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const wiadomoscPattern = /^[\s\S]{10,500}$/;
 
 function wyswietlSamochody(lista) {
   let kontener = document.querySelector("#kartyKontener");
