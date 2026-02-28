@@ -266,14 +266,15 @@ body.dark .login-strona {
 }
 
 
-.kontakt-grupa {
-    margin-bottom: 15px;
-}
-
-.kontakt-grupa label {
+.sekcja-kontakt label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+}
+
+.sekcja-kontakt input,
+.sekcja-kontakt textarea {
+    margin-bottom: 15px;
 }
 
 .sekcja-kontakt input,
