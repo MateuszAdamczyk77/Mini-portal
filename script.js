@@ -81,6 +81,7 @@ szukajInput.addEventListener("input", () => {
 // Dark/light mode
 MotywBtn.addEventListener("click", () => {
     if (document.body.className === "dark") {
+        document.body.className = ""
         MotywBtn.innerHTML = "Tryb ciemny"
     } else {
         document.body.className = "dark"
